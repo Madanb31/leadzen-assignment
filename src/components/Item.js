@@ -10,19 +10,19 @@ export default function Item(props) {
             <div id={props.id} className="card">
                 <div className="card-body d-flex justify-content-around">
                     <p className="card-title d-inline my-5">{props.title}</p>
-                    <li className="list-group-item d-flex justify-content-between align-items-start">
+                    <li className="list-group-item d-flex justify-content-between ">
                         <div className=" me-auto">
                             <div className="fw-bold">Contact</div>
                             <div className='mt-4'>{props.name}</div>
                         </div>
                     </li>
-                    <li className="list-group-item d-flex justify-content-between align-items-start">
+                    <li className="list-group-item d-flex justify-content-between ">
                         <div className=" me-auto">
                             <div className="fw-bold">City</div>
                             <div className='mt-4'>{props.city}</div>
                         </div>
                     </li>
-                    <li className="list-group-item d-flex justify-content-between align-items-start">
+                    <li className="list-group-item d-flex justify-content-between ">
                         <div className=" me-auto">
                             <div className="fw-bold">Street</div>
                             <div className='mt-4'>{props.street}</div>
@@ -30,7 +30,7 @@ export default function Item(props) {
                     </li>
 
                     <p className='d-inline'>
-                        <button className="btn btn-danger mt-5 btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <button className="btn btn-danger mt-5 btn-sm" type="button" data-bs-toggle="collapse" data-bs-target={'#' + props.city} aria-expanded="false" aria-controls="collapseExample">
                             View Details
                         </button>
                         {/* {console.log(data-bs-target)} */}
@@ -39,7 +39,7 @@ export default function Item(props) {
                     {/* <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> */}
                     {/* <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p> */}
                 </div>
-                <div className="collapse" id="collapseExample">
+                <div className="collapse" id={props.city}>
                     <div className="card card-body mx-5 my-3">
                         <li className="list-group-item d-flex justify-content-between align-items-start">
                             <div className="ms-2 me-auto">
